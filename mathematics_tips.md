@@ -22,3 +22,20 @@ $A^\intercal$
 ```
 
 [reference](https://tex.stackexchange.com/questions/3238/bm-package-versus-boldsymbol)
+
+## Cases
+
+```latex
+...
+\usepackage{amsmath}
+...
+\[
+I_A = 
+\begin{cases}
+0 & \text{if } A \text{ does not occur}\\
+1 & \text{if } A \text{ occurs}
+\end{cases}
+\]
+```
+
+[reference](https://tex.stackexchange.com/questions/262079/typesetting-a-function-defined-by-case-analysis/262081)
