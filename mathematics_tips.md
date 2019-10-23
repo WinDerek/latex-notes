@@ -39,3 +39,14 @@ I_A =
 ```
 
 [reference](https://tex.stackexchange.com/questions/262079/typesetting-a-function-defined-by-case-analysis/262081)
+
+## The not sign
+
+Often we want to achieve a 'centered not' sign. Use `centernot`!
+
+```latex
+...
+\usepackage{centernot}
+...
+\[X \centernot = Y\]
+```
