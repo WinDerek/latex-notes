@@ -50,3 +50,9 @@ Often we want to achieve a 'centered not' sign. Use `centernot`!
 ...
 \[X \centernot = Y\]
 ```
+
+## The empty set sign
+
+The `\emptyset` produces an ugly sign: $\emptyset$. It's preferred by many to use `\varnothing` from the `amssymb` package.
+
+[reference](https://tex.stackexchange.com/a/22799)
