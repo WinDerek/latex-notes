@@ -56,3 +56,20 @@ Often we want to achieve a 'centered not' sign. Use `centernot`!
 The `\emptyset` produces an ugly sign: $\emptyset$. It's preferred by many to use `\varnothing` from the `amssymb` package.
 
 [reference](https://tex.stackexchange.com/a/22799)
+
+## Vector norm 2
+
+```latex
+...
+\usepackage{mathtools}
+...
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+...
+\[\norm{x}\]
+```
+
+## Underbrace
+
+```latex
+\[\underbrace_{x + y}_{\text{the text}} + z = 1\]
+```
