@@ -73,3 +73,13 @@ The `\emptyset` produces an ugly sign: $\emptyset$. It's preferred by many to us
 ```latex
 \[\underbrace_{x + y}_{\text{the text}} + z = 1\]
 ```
+
+## Prefered \operatorname
+
+When we have to type some function in math mode, we may want the function name to remain normal text rather than rendered as math mode. `\operatorname{}` is prefered among the options.
+
+`\operatorname{sin} x` produces $\operatorname{sin} x$
+
+`\mathrm{sin} x` produces $\mathrm{sin} x$
+
+`\text{sin} x` produces $\text{sin} x$
