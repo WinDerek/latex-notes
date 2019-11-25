@@ -83,3 +83,13 @@ When we have to type some function in math mode, we may want the function name t
 `\mathrm{sin} x` produces $\mathrm{sin} x$
 
 `\text{sin} x` produces $\text{sin} x$
+
+## The `argmax` function
+
+```latex
+\[
+\operatorname{\underset{\theta}{\arg\max}} f(\theta)
+\]
+```
+
+$\operatorname{\underset{\theta}{\arg\max}} f(\theta)$
