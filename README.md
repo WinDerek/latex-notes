@@ -11,3 +11,5 @@ Simple tips are only be recorded in markdown files.
 ## Complex notes
 
 Complex notes will be presented with `.tex` files and compiled PDF files.
+
+- Psudocode: [psudocode](./psudocode)
