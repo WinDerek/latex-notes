@@ -1,0 +1,109 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+\usepackage{bm}
+\usepackage{centernot}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows, automata, shapes.geometric, positioning}
+\usepackage{tipa}
+\usepackage{relsize}
+\usepackage{centernot}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\definecolor{MyLinkColor}{HTML}{2c82c9}
+\definecolor{MyFrameColor}{HTML}{6c7a89}
+\definecolor{MyBackColor}{HTML}{e8e8e8}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=MyLinkColor,
+    filecolor=MyLinkColor,
+    urlcolor=MyLinkColor,
+}
+
+% Defines my own macro to insert the @ from a different font.
+% Reference: https://tex.stackexchange.com/questions/29238/how-can-i-change-the-symbol-in-e-mail-addresses
+\newcommand*\myat{{\fontfamily{ptm}\selectfont @}}
+
+% Set the indention of paragraphs to zero
+\setlength{\parindent}{0pt}
+
+% Set the paragraph spacing
+\setlength{\parskip}{1em}
+
+\begin{document}
+\title{Psudocode example in \LaTeX}
+\author{\\
+	\href{mailto:frankderekdick@gmail.com}{frankderekdick\myat gmail.com}
+\date{}
+}
+
+\maketitle
+
+\pagebreak
+
+The AdaBoost algorithm for multi-class classification problem (SAMME):
+
+\begin{algorithm}[H]
+    \caption{SAMME}\label{samme}
+    \begin{algorithmic}[1]
+        % Input
+        \Statex \textbf{Input}: \begin{enumerate}
+            \item $dataset$: a set of $n$ labeled examples $(x_1, y_1), \dots, (x_n, y_n)$.
+            \item $C$: The base classification algorithm (classifier).
+            \item $M$: The number of hypotheses in the ensemble.
+            \item $K$: The number of categories.
+        \end{enumerate}
+        
+        % Local variables
+        \Statex \textbf{Local variables}: \begin{enumerate}
+            \item $w$: A vector of $n$ sample weights, initially $1/n$.
+            \item $c$: A vector of $M$ classifiers.
+            \item $z$: A vector of $K$ classifier weights.
+        \end{enumerate}
+        
+        \Function{AdaBoost}{$dataset, C, M, K$}
+        \For{$m \gets 1, M$}
+            \State $c_m \gets C(dataset, w)$ \Comment{Fit a classifier}
+            
+            \Statex
+            \State $error \gets 0$ \Comment{Compute the error}
+            \For{$i \gets 1, n$}
+                \If{$c_m(x_i) \centernot = y_i$}
+                    \State $error \gets error + w_i$
+                \EndIf
+            \EndFor
+            
+            \Statex
+            \State $z_m \gets \log \left(\frac{1 - error}{error}\right) + \log (K-1)$ \Comment{Compute the weight for this classifier}
+            
+            \Statex
+            \For{$i \gets 1, n$} \Comment{Update the sample weights}
+                \If{$c_m(x_i) \centernot = y_i$}
+                    \State $w_i \gets w_i \cdot \frac{1 - error}{error} \cdot (K - 1)$
+                \EndIf
+            \EndFor
+            
+            \Statex
+            \State $w \gets \operatorname{NORMALIZE}(w)$ \Comment{Normalize the sample distribution}
+        \EndFor
+        
+        \Return{$\operatorname{WEIGHTED\_MAJORITY}(c, z, x)$}
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+\end{document}
