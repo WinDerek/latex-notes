@@ -2,7 +2,15 @@
 \documentclass{article}
 \usepackage{fontspec}
 
-\newfontfamily{\monaco}{[monaco.ttf]}
+\newfontfamily{\roboto}
+[Ligatures=TeX, % recommended
+Path=fonts/roboto/,
+Extension=.ttf,
+UprightFont={*_regular},
+ItalicFont={*_italic},
+BoldFont={*_bold},
+BoldItalicFont={*_bold_italic}]
+{roboto}
 
 \title{Loading custom .ttf font files in \LaTeX}
 
@@ -15,6 +23,12 @@
 
 Normal Font Text.
 
-{\monaco Do I look like ``monaco'' font?}
+{\roboto Roboto regular}
+
+{\roboto \textit{Roboto italic}}
+
+{\roboto \textbf{Roboto bold}}
+
+{\roboto \textit{\textbf{Roboto bold italic}}}
 
 \end{document}
