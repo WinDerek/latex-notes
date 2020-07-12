@@ -93,3 +93,7 @@ When we have to type some function in math mode, we may want the function name t
 ```
 
 $\operatorname{\underset{\theta}{\arg\max}} f(\theta)$
+
+## Auto linebreaks in `align` equations
+
+`breqn` and `autobreak`
