@@ -23,3 +23,9 @@
 ```
 
 [https://tex.stackexchange.com/questions/37080/how-can-i-indent-a-block-of-text-for-a-specified-amount/37084](https://tex.stackexchange.com/questions/37080/how-can-i-indent-a-block-of-text-for-a-specified-amount/37084)
+
+## Dash symbols
+
+- Hyphen: `-`
+- En-dash: `--`, `\textendash` (`\textendash{}` in case there is text after this)
+- Em-dash: `---`, `\textemdash{}`, (`\textemdash{}` in case there is text after this)
