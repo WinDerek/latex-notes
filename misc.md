@@ -29,3 +29,7 @@
 - Hyphen: `-`
 - En-dash: `--`, `\textendash` (`\textendash{}` in case there is text after this)
 - Em-dash: `---`, `\textemdash{}`, (`\textemdash{}` in case there is text after this)
+
+## Math fonts
+
+Including some packages may implicitly change the math font globally. For example, usage of `\usepackage{fdsymbol}` in IEEE conference will change the math font to the ACM-like style.
