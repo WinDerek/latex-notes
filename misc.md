@@ -33,3 +33,14 @@
 ## Math fonts
 
 Including some packages may implicitly change the math font globally. For example, usage of `\usepackage{fdsymbol}` in IEEE conference will change the math font to the ACM-like style.
+
+## Spacing
+
+```latex
+\, thin space (normally 1/6 of a quad);
+\> medium space (normally 2/9 of a quad);
+\; thick space (normally 5/18 of a quad);
+\! negative thin space (normally 1/6 of a quad).
+```
+
+[reference](https://tex.stackexchange.com/a/9092/216629)

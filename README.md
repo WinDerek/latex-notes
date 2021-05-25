@@ -6,6 +6,7 @@ This repository contains the my notes for LaTeX. The notes are results of browse
 
 Simple tips are only be recorded in markdown files.
 
+- Miscellaneous tips: [misc.md](misc.md)
 - Mathematics tips: [mathematics_tips.md](mathematics_tips.md)
 
 ## Complex notes
