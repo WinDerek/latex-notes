@@ -97,3 +97,8 @@ $\operatorname{\underset{\theta}{\arg\max}} f(\theta)$
 ## Auto linebreaks in `align` equations
 
 `breqn` and `autobreak`
+
+## Package conflicts between `amssymb` and `unicode-math`
+
+- https://tex.stackexchange.com/questions/549933/symbol-eth-already-defined-when-using-libertinus-otf-and-lualatex-pandoc/549938#549938
+- https://github.com/sjtug/SJTUThesis/issues/502
