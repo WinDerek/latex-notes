@@ -44,3 +44,7 @@ Including some packages may implicitly change the math font globally. For exampl
 ```
 
 [reference](https://tex.stackexchange.com/a/9092/216629)
+
+## `\input` v.s. `\include`
+
+[reference](https://tex.stackexchange.com/a/250)
