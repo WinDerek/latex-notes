@@ -23,6 +23,8 @@ $A^\intercal$
 
 [reference](https://tex.stackexchange.com/questions/3238/bm-package-versus-boldsymbol)
 
+If the `bm` package is not available, you can use `\boldsymbol{\theta}` alternatively.
+
 ## Cases
 
 ```latex
@@ -102,3 +104,26 @@ $\operatorname{\underset{\theta}{\arg\max}} f(\theta)$
 
 - https://tex.stackexchange.com/questions/549933/symbol-eth-already-defined-when-using-libertinus-otf-and-lualatex-pandoc/549938#549938
 - https://github.com/sjtug/SJTUThesis/issues/502
+
+## Placing the equation numbers level with the last line
+
+If you use `split` environments, then you need to pass `tbtags` option to the `amsmath` package:
+```latex
+\usepackage[tbtags]{amsmath} % For placing the equation numbers level with the last line when using split environment
+```
+
+However, this often cause the "option clash" error, since many other packages like `mathtools` and `amsthm` load `amsmath` as well. Thus, it is recommended to put the above line at the top, before loading other packages.
+
+If you use `aligned` environments, then passing `[b]` option will be enough:
+```latex
+\begin{equation}\label{eq:test}
+  \begin{aligned}[b]
+    a &= b\\
+    &= c\\
+    &= d.
+  \end{aligned}
+\end{equation}
+```
+
+References:
+- [equations - What's the difference between split and aligned? - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/187938/whats-the-difference-between-split-and-aligned)
