@@ -48,3 +48,7 @@ Including some packages may implicitly change the math font globally. For exampl
 ## `\input` v.s. `\include`
 
 [reference](https://tex.stackexchange.com/a/250)
+
+## Always put `\label` after `\caption`
+
+[reference](https://tex.stackexchange.com/questions/32325/why-does-an-environments-label-have-to-appear-after-the-caption)
