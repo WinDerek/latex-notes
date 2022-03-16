@@ -22,3 +22,4 @@ Complex notes will be presented with `.tex` files and compiled PDF files.
 - overleaf
 - Sublime Text
 - VS Code + LaTeX Workshop Extension: [vscode.md](vscode.md)
+- Command Line Compilation: [cmd.md](cmd.md)
