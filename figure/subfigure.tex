@@ -1,0 +1,53 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+\begin{document}
+\begin{figure}[htbp]
+    \centering
+    \subcaptionbox{A.}{\includegraphics[width=0.33\linewidth]{example-image-a}}
+    \subcaptionbox{B.}{\includegraphics[width=0.33\linewidth]{example-image-b}}
+    \caption{Example of one line using \texttt{subcaption}.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \subcaptionbox{A.}{\includegraphics[width=0.33\linewidth]{example-image-a}}
+
+    \subcaptionbox{B.}{\includegraphics[width=0.33\linewidth]{example-image-b}}
+    \caption{Example of two lines using \texttt{subcaption}.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.33\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-a}
+        \caption{A.}
+    \end{subfigure}
+    \begin{subfigure}{0.33\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-b}
+        \caption{B.}
+    \end{subfigure}
+    \caption{Example of one line using \texttt{subfigure}.}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.33\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-a}
+        \caption{A.}
+    \end{subfigure}
+
+    \begin{subfigure}{0.33\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{example-image-b}
+        \caption{B.}
+    \end{subfigure}
+    \caption{Example of two lines using \texttt{subfigure}.}
+\end{figure}
+
+\end{document}
